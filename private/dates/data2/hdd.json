@@ -1,0 +1,114 @@
+[
+ {
+   "id": 1,
+   "name": "1TB SATA",
+   "value": 40000,
+   "type": "SATA",
+   "capacity": 1000
+ },
+ {
+   "id": 2,
+   "name": "2TB SATA",
+   "value": 60000,
+   "type": "SATA",
+   "capacity": 2000
+ },
+ {
+   "id": 3,
+   "name": "240GB SSD",
+   "value": 65000,
+   "type": "SSD",
+   "capacity": 240
+ },
+ {
+   "id": 4,
+   "name": "300GB 15000RPM SAS",
+   "value": 80000,
+   "type": "SAS",
+   "capacity": 300
+ },
+ {
+   "id": 5,
+   "name": "4TB SATA",
+   "value": 90000,
+   "type": "SATA",
+   "capacity": 4000
+ },
+ {
+   "id": 6,
+   "name": "6TB SATA",
+   "value": 115000,
+   "type": "SATA",
+   "capacity": 6000
+ },
+ {
+   "id": 7,
+   "name": "480GB SSD",
+   "value": 120000,
+   "type": "SSD",
+   "capacity": 480
+ },
+ {
+   "id": 8,
+   "name": "600GB 15000RPM SAS",
+   "value": 130000,
+   "type": "SAS",
+   "capacity": 600
+ },
+ {
+   "id": 9,
+   "name": "8TB SATA",
+   "value": 140000,
+   "type": "SATA",
+   "capacity": 8000
+ },
+ {
+   "id": 10,
+   "name": "10TB SATA",
+   "value": 200000,
+   "type": "SATA",
+   "capacity": 10000
+ },
+ {
+   "id": 11,
+   "name": "800GB SSD",
+   "value": 220000,
+   "type": "SSD",
+   "capacity": 800
+ },
+ {
+   "id": 12,
+   "name": "1920GB SSD",
+   "value": 390000,
+   "type": "SSD",
+   "capacity": 1920
+ },
+ {
+   "id": 13,
+   "name": "PCI-E NVMe 2 TB",
+   "value": 770000,
+   "type": "nvme",
+   "capacity": 2000
+ },
+ {
+   "id": 14,
+   "name": "Intel Optane SSD DC P4800X 375GB",
+   "value": 850000,
+   "type": "nvme",
+   "capacity": 375
+ },
+ {
+   "id": 15,
+   "name": "Intel Optane SSD DC P4800X 375GB with IMDT",
+   "value": 1000000,
+   "type": "optane",
+   "capacity": 375
+ },
+ {
+   "id": 16,
+   "name": "PCI-E NVMe 4 TB",
+   "value": 1540000,
+   "type": "nvme",
+   "capacity": 4000
+ }
+]

@@ -1,0 +1,58 @@
+[
+ {
+   "id": 1,
+   "name": "813MTQ-350CB (1U)",
+   "value": 300000,
+   "units": 1,
+   "type": "ATX",
+   "hddbays": 4
+ },
+ {
+   "id": 2,
+   "name": "815TQ-563CB (1U)",
+   "value": 320000,
+   "units": 1,
+   "type": "E-ATX",
+   "hddbays": 4
+ },
+ {
+   "id": 7,
+   "name": "ASUS ESC8000 G3",
+   "value": 1500000,
+   "units": 3,
+   "type": "GE-ATX",
+   "hddbays": 6
+ },
+ {
+   "id": 3,
+   "name": "825TQ-563LPB (2U)",
+   "value": 430000,
+   "units": 2,
+   "type": "E-ATX",
+   "hddbays": 8
+ },
+ {
+   "id": 4,
+   "name": "836TQ-R800 (3U)",
+   "value": 760000,
+   "units": 3,
+   "type": "E-ATX",
+   "hddbays": 16
+ },
+ {
+   "id": 5,
+   "name": "846TQ-R900B (4U)",
+   "value": 970000,
+   "units": 4,
+   "type": "E-ATX",
+   "hddbays": 24
+ },
+ {
+   "id": 6,
+   "name": "847A-R1400LPB (4U)",
+   "value": 1260000,
+   "units": 4,
+   "type": "E-ATX",
+   "hddbays": 36
+ }
+]
