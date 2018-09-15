@@ -13,7 +13,9 @@ var countCPU,
 var CPUS = [],
     MB,
     CASES,
-    RAM;
+    RAM,
+    REST,
+    HDD;
 var costCpu = 0,costCase = 0,costMb = 0,costRam = 0,costPcie = 0,costHdd = 0;
 var g_data = $.ajax({
     url: "http://masstek.ru/calc/components.php?delay=1&stock=data",
@@ -103,10 +105,17 @@ function updateCost() {
 }
 
 function dropForm() {
+    costRam = costCase = costCpu = costHdd = costMb = costPcie = costRam = 0;
     updateCPU();
     updateMB();
     updateCASE();
     insertRAMS();
+    insertPCIE();
+    insertHDD();
+    $('#cost_pci').text('-');
+    $('#cost_ram').text('-');
+    $('#cost_hdd').text('-');
+    updateCost();
 }
 
 function insertRAMS() {
@@ -116,13 +125,65 @@ function insertRAMS() {
     RAM = g_data['ram'];
     $.each(mb2ram, function (key, val) {
         if(selectMB.id == val.MB) {
-            id = RAM[val.MB].id;
+            id = RAM[val.RAM].id;
             name = RAM[val.MB].name;
             price = RAM[val.MB].value/100;
             html += `<option value="${id}">${name} - ${price} RUB.</option>`;
         }
     });
     $('#ram').html(html);
+}
+
+function insertHDD() {
+    var html = '<option selected>Выберите HDD</option>';
+    HDD = g_data['hdd'];
+    $.each(HDD, function (key, val) {
+        id = val.id;
+        name = val.name;
+        price = val.value/100;
+        html += `<option value="${id}">${name} - ${price} RUB.</option>`;
+    });
+    $('#hdd').html(html);
+}
+
+function insertPCIE() {
+    var html = '<option selected>Выберите PCIE карту</option>',
+        mb2add;
+    mb2add = g_data['mb2add'];
+    REST = g_data['rest'];
+    $.each(mb2add, function (key, val) {
+        if(selectMB.id == val.MB) {
+            id = REST[val.ADD].id;
+            name = REST[val.ADD].name;
+            price = REST[val.ADD].value/100;
+            html += `<option value="${id}">${name} - ${price} RUB.</option>`;
+        }
+    });
+    $('#pci').html(html);
+}
+
+function updateHDD() {
+    costHdd = selectHDD.value/100;
+    $('#cost_hdd').text(costHdd + ' RUB.');
+    updateCost();
+}
+
+function onChangeHDD() {
+    var id = $('#hdd option:selected').val();
+    selectHDD = HDD[id];
+    updateHDD();
+}
+
+function updateREST() {
+    costPcie = selectPCIE.value/100;
+    $('#cost_pci').text(costPcie + ' RUB.');
+    updateCost();
+}
+
+function onChangeREST() {
+    var id = $('#pci option:selected').val();
+    selectPCIE = REST[id];
+    updateREST();
 }
 
 function updateRAM(){
@@ -132,7 +193,7 @@ function updateRAM(){
 }
 
 function onChangeRAM() {
-    var id = $('#cpu option:selected').val();
+    var id = $('#ram option:selected').val();
     selectRAM = RAM[id];
     updateRAM();
 }
@@ -142,5 +203,4 @@ function onChangeCPU(){
     id--;
     selectCPU = CPUS[id];
     dropForm();
-    updateCost();
 }

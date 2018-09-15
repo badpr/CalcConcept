@@ -15,7 +15,7 @@
         <label for="cpu" class="calc-l">
             <h5 class="calc-l__title">Выберите процессор</h5>
             <p>
-                <select name="cpu" id="cpu" onchange="onChangeCPU();" class="c-select">
+                <select name="cpu" id="cpu" onchange="onChangeCPU();" class="c-select" required="required">
                     <option selected>Выберите CPU</option>
                 </select>
             </p>
@@ -27,7 +27,7 @@
         <label for="ram" class="calc-l">
             <h5 class="calc-l__title">Выберите ОЗУ</h5>
             <p>
-                <select name="ram" id="ram" class="c-select" onchange="onChangeRAM();">
+                <select name="ram" id="ram" class="c-select" onchange="onChangeRAM();" required="required">
                     <option selected>Выберите RAM</option>
                 </select>
             </p>
@@ -35,7 +35,7 @@
         <label for="pci" class="calc-l">
             <h5 class="calc-l__title">Выберите PCIE карты</h5>
             <p>
-                <select name="pci" id="pci" class="c-select">
+                <select name="pci" id="pci" class="c-select" onchange="onChangeREST()">
                     <option selected>Выберите PCIE карту</option>
                 </select>
             </p>
@@ -43,7 +43,7 @@
         <label for="hdd" class="calc-l">
             <h5 class="calc-l__title">Выберите жёсткий диск</h5>
             <p>
-                <select name="hdd" id="hdd" class="c-select">
+                <select name="hdd" id="hdd" class="c-select" required="required" onchange="onChangeHDD()">
                     <option selected>Выберите HDD</option>
                 </select>
             </p>
